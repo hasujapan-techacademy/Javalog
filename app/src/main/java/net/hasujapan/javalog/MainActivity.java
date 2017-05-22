@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    final private String TAG = "javalog";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +17,20 @@ public class MainActivity extends AppCompatActivity {
             （〜〜はメンバ変数から取得）というLogを出力させてください。
          */
 
-        Human human = new Human("名前", 1);
-        human.say();
+        Human ahuman = new Human("名前", 1);
+        ahuman.say();
+
+        /*
+            課題2.
+            thinkメソッドを持つThinkableインタフェースを作成し、
+            Humanクラスに実装させてください。
+            Humanクラスにはhobbyという文字列型のメンバ変数を用意し、
+            thinkメソッドを呼び出すと「私は〜〜について考える」（〜〜はhobbyから取得）
+            というLogを出力させてください。
+         */
+
+        Human bHuman = new Human("名前", 1, "趣味");
+        bHuman.think();
 
     }
 }
